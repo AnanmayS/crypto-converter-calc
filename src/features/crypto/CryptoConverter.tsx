@@ -26,7 +26,6 @@ import {
   Legend
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -185,12 +184,6 @@ export const CryptoConverter: React.FC = () => {
     }
   };
 
-  const handleSwap = () => {
-    const tempFrom = selectedFromCurrency;
-    setSelectedFromCurrency(selectedToCurrency);
-    setSelectedToCurrency(tempFrom);
-  };
-
   const handleFromMenuClick = (event: React.MouseEvent<HTMLElement>) => {
     setFromAnchorEl(event.currentTarget);
   };
@@ -259,15 +252,6 @@ export const CryptoConverter: React.FC = () => {
       default: return 8;
     }
   };
-
-  const graphData = useMemo(() => {
-    if (!historicalData?.length) return [];
-    
-    return historicalData.map(({ timestamp, price }) => ({
-      time: new Date(timestamp).toISOString(),
-      value: price
-    }));
-  }, [historicalData]);
 
   const isLoading = isLoadingHistory || isLoadingPrice;
   const error = historyError || priceError;
