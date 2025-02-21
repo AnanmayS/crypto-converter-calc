@@ -18,7 +18,6 @@ A modern, responsive web application for real-time cryptocurrency conversions an
 
 Experience the app live at: [**Crypto Converter**](https://crypto-converter-calculator.netlify.app/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-id/deploy-status)](https://crypto-converter-calculator.netlify.app/)
 
 Try converting between different cryptocurrencies and fiat currencies, explore price charts, and toggle between dark/light modes!
 
