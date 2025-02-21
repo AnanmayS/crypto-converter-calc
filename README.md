@@ -2,9 +2,21 @@
 
 A modern, responsive web application for real-time cryptocurrency conversions and price tracking, built with React and TypeScript.
 
-![Cryptocurrency Converter](https://your-screenshot-url.png) <!-- You can add a screenshot of your app later -->
+<div align="center">
+  <h3>✨ Beautiful Interface with Real-time Price Charts ✨</h3>
+  
+  <details open>
+    <summary><strong>🌙 Dark Mode</strong></summary>
+    <img src="assets/dark-mode-preview.png" alt="Crypto Converter Dark Mode" width="100%" />
+  </details>
 
-## Features
+  <details open>
+    <summary><strong>☀️ Light Mode</strong></summary>
+    <img src="assets/light-mode-preview.png" alt="Crypto Converter Light Mode" width="100%" />
+  </details>
+</div>
+
+## ✨ Features
 
 - Real-time cryptocurrency to fiat currency conversions
 - Interactive price charts with multiple timeframes (1D, 7D, 30D, 90D, 1Y)
@@ -17,7 +29,6 @@ A modern, responsive web application for real-time cryptocurrency conversions an
 ## 🚀 Live Demo
 
 Experience the app live at: [**Crypto Converter**](https://crypto-converter-calculator.netlify.app/)
-
 
 Try converting between different cryptocurrencies and fiat currencies, explore price charts, and toggle between dark/light modes!
 
