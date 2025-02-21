@@ -23,7 +23,7 @@ Try converting between different cryptocurrencies and fiat currencies, explore p
 
 ## Tech Stack
 
-- React 18
+- React
 - TypeScript
 - Chart.js for data visualization
 - React-tsparticles for background effects
