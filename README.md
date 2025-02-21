@@ -14,7 +14,7 @@ A modern, responsive web application for real-time cryptocurrency conversions an
 
 ## Live Demo
 
-[View Live Demo](crypto-converter-calculator.netlify.app) <!-- Add your Vercel URL after deployment -->
+[View Live Demo]([crypto-converter-calculator.netlify.app](https://crypto-converter-calculator.netlify.app/)) <!-- Add your Vercel URL after deployment -->
 
 ## Tech Stack
 
