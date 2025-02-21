@@ -2,6 +2,8 @@
 
 A modern, responsive web application for real-time cryptocurrency conversions and price tracking, built with React and TypeScript.
 
+![Cryptocurrency Converter](https://your-screenshot-url.png) <!-- You can add a screenshot of your app later -->
+
 ## Features
 
 - Real-time cryptocurrency to fiat currency conversions
@@ -12,9 +14,13 @@ A modern, responsive web application for real-time cryptocurrency conversions an
 - Interactive particle background effects
 - Fully responsive design for all devices
 
-## Live Demo
+## 🚀 Live Demo
 
-(https://app.netlify.com/sites/crypto-converter-calculator/deploys)] <!-- Add your Vercel URL after deployment -->
+Experience the app live at: [**Crypto Converter**](https://crypto-converter-calculator.netlify.app/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-id/deploy-status)](https://crypto-converter-calculator.netlify.app/)
+
+Try converting between different cryptocurrencies and fiat currencies, explore price charts, and toggle between dark/light modes!
 
 ## Tech Stack
 
