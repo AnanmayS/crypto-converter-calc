@@ -46,17 +46,6 @@ interface Currency {
 
 const timeFrames: TimeFrame[] = ['1D', '7D', '30D', '90D', '1Y'];
 
-const getDaysFromTimeFrame = (timeFrame: TimeFrame): number => {
-  switch (timeFrame) {
-    case '1D': return 1;
-    case '7D': return 7;
-    case '30D': return 30;
-    case '90D': return 90;
-    case '1Y': return 365;
-    default: return 30;
-  }
-};
-
 const cryptocurrencies: Currency[] = [
   { id: 'bitcoin', name: 'Bitcoin', symbol: 'BTC' },
   { id: 'ethereum', name: 'Ethereum', symbol: 'ETH' },
@@ -129,8 +118,7 @@ export const CryptoConverter: React.FC = () => {
   const {
     price: currentPrice,
     isLoading: isLoadingPrice,
-    error: priceError,
-    priceChangePercentage24h
+    error: priceError
   } = usePrice(
     selectedFromCurrency?.id || 'bitcoin',
     selectedToCurrency?.id || 'usd'
@@ -250,7 +238,7 @@ export const CryptoConverter: React.FC = () => {
         setFromAmount(roundedAmount.toString());
       }
     }
-  }, [currentPrice, isLoadingPrice]);
+  }, [currentPrice, isLoadingPrice, lastEdited, fromAmount, toAmount]);
 
   const formatAmount = (amount: number, isCrypto: boolean) => {
     if (isNaN(amount)) return '0';
@@ -284,7 +272,7 @@ export const CryptoConverter: React.FC = () => {
   const isLoading = isLoadingHistory || isLoadingPrice;
   const error = historyError || priceError;
 
-  const getChartData = () => {
+  const getChartData = useCallback(() => {
     if (selectedFromCurrency && historicalData?.length > 0) {
       const labels = historicalData.map(data => {
         const d = new Date(data.timestamp);
@@ -325,11 +313,11 @@ export const CryptoConverter: React.FC = () => {
     } else {
       setChartData(null);
     }
-  };
+  }, [selectedFromCurrency, historicalData, selectedTimeFrame, theme.palette.primary.main]);
 
   useEffect(() => {
     getChartData();
-  }, [selectedFromCurrency, historicalData, selectedTimeFrame, theme.palette.primary.main]);
+  }, [selectedFromCurrency, historicalData, selectedTimeFrame, theme.palette.primary.main, getChartData]);
 
   const chartOptions = {
     responsive: true,
