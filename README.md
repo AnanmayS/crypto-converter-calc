@@ -25,7 +25,6 @@ Try converting between different cryptocurrencies and fiat currencies, explore p
 
 - React 18
 - TypeScript
-- Material-UI v5
 - Chart.js for data visualization
 - React-tsparticles for background effects
 - CoinGecko API for price data
