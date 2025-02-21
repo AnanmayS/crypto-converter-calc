@@ -2,9 +2,6 @@
 
 A modern, responsive web application for real-time cryptocurrency conversions and price tracking, built with React and TypeScript.
 
-![Cryptocurrency Converter](<img width="1677" alt="Screenshot 2025-02-21 at 12 08 24 AM" src="https://github.com/user-attachments/assets/719a379e-b11f-4ab7-a270-c211cecf4b37" />
-) <!-- You can add a screenshot of your app later -->
-
 ## Features
 
 - Real-time cryptocurrency to fiat currency conversions
