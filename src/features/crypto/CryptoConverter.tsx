@@ -263,7 +263,7 @@ export const CryptoConverter: React.FC = () => {
         if (selectedTimeFrame === '1D') {
           return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
         } else if (selectedTimeFrame === '1Y') {
-          return d.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
+          return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
         } else if (selectedTimeFrame === '90D' || selectedTimeFrame === '30D') {
           return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         }
@@ -338,10 +338,23 @@ export const CryptoConverter: React.FC = () => {
           title: (tooltipItems: any) => {
             const item = tooltipItems[0];
             if (!item) return '';
+            
+            // Store the timestamp in the raw property for tooltips
+            const timestamp = historicalData[item.dataIndex]?.timestamp;
+            if (!timestamp) return '';
+            
+            const date = new Date(timestamp);
+            
             if (selectedTimeFrame === '1D') {
-              return item.label;
+              return date.toLocaleTimeString('en-US', { 
+                hour: 'numeric', 
+                minute: '2-digit',
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+              });
             }
-            const date = new Date(item.label);
+            
             return date.toLocaleDateString('en-US', { 
               weekday: 'long',
               year: 'numeric',
