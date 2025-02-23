@@ -5,14 +5,14 @@ A modern, responsive web application for real-time cryptocurrency conversions an
 <div align="center">
   <h3>✨ Beautiful Interface with Real-time Price Charts ✨</h3>
   
-  <details open>
+  <details cloase>
     <summary><strong>🌙 Dark Mode</strong></summary>
-    <img src="assets/dark-mode-preview.png" alt="Crypto Converter Dark Mode" width="100%" />
+    <img width="1680" alt="Screenshot 2025-02-21 at 12 24 39 AM" src="https://github.com/user-attachments/assets/4d34387e-ff1d-42e2-be33-092805a245e5" />
   </details>
 
-  <details open>
+  <details close>
     <summary><strong>☀️ Light Mode</strong></summary>
-    <img src="assets/light-mode-preview.png" alt="Crypto Converter Light Mode" width="100%" />
+    <img width="1680" alt="Screenshot 2025-02-21 at 12 25 25 AM" src="https://github.com/user-attachments/assets/a56369e8-cefa-4541-92f0-e20c7ca57312" />
   </details>
 </div>
 
